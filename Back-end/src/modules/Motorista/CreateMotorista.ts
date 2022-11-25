@@ -1,6 +1,6 @@
-import { prisma } from "../../database/prismaCliente";
-
-interface Motorista{
+import { Prisma } from "../../database/prismaCliente";
+ 
+interface IMotorista{
     ID_moto: Number;
     Nome : String;
     Telefone : String;
@@ -9,9 +9,9 @@ interface Motorista{
 }
 
 export class CreateMotorista{
-    async execute({ID_moto, Nome, Telefone, Idade, Sexo} : Motorista){
+    async execute({ID_moto, Nome, Telefone, Idade, Sexo} : IMotorista){
         //validar se o motorista já existe
-        const motoristaExist = await prisma.clients.findFrist({
+        const motoristaExist = await Prisma.clients.findFrist({
             where:{
                 ID_moto :{
                     mode: "insensitive"
@@ -24,7 +24,7 @@ export class CreateMotorista{
         }
 
         //salvar o motorista no banco de dados
-        const Motorista = await prisma.clientes.create({
+        const Motorista = await Prisma.clients.create({
             data:{
                 ID_moto,
                 Nome,
@@ -33,5 +33,7 @@ export class CreateMotorista{
                 Sexo
             }
         })
+
+        return Motorista;
     }
 }
