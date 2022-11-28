@@ -1,21 +1,4 @@
--- CreateTable
-CREATE TABLE "Motorista" (
-    "id_moto" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    "nome" TEXT NOT NULL,
-    "telefone" TEXT NOT NULL,
-    "idade" TEXT NOT NULL,
-    "sexo" TEXT NOT NULL
-);
-
--- CreateTable
-CREATE TABLE "Carro" (
-    "id_carro" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    "nome" TEXT NOT NULL,
-    "cor" TEXT NOT NULL,
-    "Ano_Fabricante" TEXT NOT NULL
-);
-
--- CreateTable
+-- CreateTable Reservas
 CREATE TABLE "Reserva" (
     "id_moto" INTEGER NOT NULL,
     "id_carro" INTEGER NOT NULL,

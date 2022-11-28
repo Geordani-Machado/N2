@@ -7,32 +7,29 @@ datasource db {
   url      = "file:./dev.db"
 }
 
-
-model Motorista{
-  id_moto   Int      @id @default(autoincrement())
-  nome      String
-  telefone  String   
-  idade     String
-  sexo      String
-  Reserva Reserva?
-  
+model Motorista {
+  id_moto  Int      @id @default(autoincrement())
+  nome     String
+  telefone String
+  idade    String
+  sexo     String
+  Reserva  Reserva?
 }
 
-model Carro{
-  id_carro        Int      @id @default(autoincrement())
-  nome            String
-  cor             String 
-  Ano_Fabricante  String
-  Reserva Reserva?
-
+model Carro {
+  id_carro       Int      @id @default(autoincrement())
+  nome           String
+  cor            String
+  Ano_Fabricante String
+  isReserved     Boolean
+  Reserva        Reserva?
 }
 
-model Reserva{
-  id_moto        Int    @unique
-  id_carro       Int @unique
-  data_inicio    DateTime  
-  data_fim       DateTime
- 
-  Motorista  Motorista @relation(fields: [id_moto], references: [id_moto])
-  Carro Carro @relation(fields: [id_carro] , references: [id_carro])
+model Reserva {
+  id_moto     Int       @unique
+  id_carro    Int       @unique
+  data_inicio DateTime
+  data_fim    DateTime
+  Carro       Carro     @relation(fields: [id_carro], references: [id_carro])
+  Motorista   Motorista @relation(fields: [id_moto], references: [id_moto])
 }

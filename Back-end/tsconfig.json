@@ -1,32 +1,19 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react",
-    "rootDir": ".",
-    "typeRoots": ["node_modules/@types", "types"],
-    "plugins": [{ "name": "nexus/typescript-language-service" }]
-  },
-  "include": [
-    "src",
-    "api/**/*",
-    "types.d.ts",
-    "types.ts",
-    "."
-  ]
+  "compilerOptions":
+    {
+      "target": "ES2022",
+      "module": "commonjs",
+      "outDir": "dist",
+      "sourceMap": true,
+      "allowJs": true,
+      "moduleResolution": "node",
+      "strict": true, 
+      "rootDirs": ["src/views", "generated/templates/views" ],
+      "esModuleInterop": true
+    },
+    "paths": {
+      "*": ["*", "generated/*"]
+    },
+  "include": ["./src", "routes/routes.ts", "routes/routes.ts"],
+  "exclude": ["node_modules"],
 }
