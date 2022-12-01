@@ -1,3 +1,24 @@
+<script>
+import Card from '@/components/Card.vue';
+import api from '@/api/api';
+
+  export default {
+    name: "HelloWorld",
+    props: {
+        msg: String
+    },
+    data(){
+        ListCarros: []
+    },
+    mounted(){
+        api.get('/carros/')
+        .then((Response)=>{
+            this.ListCarros = Response.data;
+        })
+    },
+    components: { Card }
+}
+  </script>
 <template>
     
         <div className="p-5"> 
@@ -34,8 +55,12 @@
             <h1 className="text-1xl text-center mt-8 text-slate-800 font-bold animate-bounce">
                     Ver Modelos
                 </h1>
-                <div className=" grid-cols-4 gap-4 flex justify-center mt-12 mb-20 px-32">
-                    <Card/>
+                <div className=" grid-cols-4 gap-4 flex justify-center mt-12 mb-20 px-32" 
+                v-for="(ListCarros, index) in libraryList" :key="index">
+                    <Card 
+                    :nome=""
+                    :velocidade=""
+                    :ano/>
                     <Card/>
                     <Card/>
                     <Card/>
@@ -56,21 +81,3 @@
      
       
   </template>
-  
-  <script>
-import Card from '@/components/Card.vue';
-
-
-
-  export default {
-    name: "HelloWorld",
-    props: {
-        msg: String
-    },
-    components: { Card }
-}
-  </script>
-  
-
-
-  
