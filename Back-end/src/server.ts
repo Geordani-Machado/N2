@@ -2,6 +2,9 @@
 const express = require('express');
 import { Routes } from "../routes/_app";
 const app = express();
+import cors from 'cors';
+
+app.use(cors())
 
 app.use(express.json());
 app.use(Routes);

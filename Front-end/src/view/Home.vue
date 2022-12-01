@@ -1,6 +1,6 @@
 <script>
 import Card from '@/components/Card.vue';
-import api from '@/api/api';
+import api from '../api/api.ts';
 
   export default {
     name: "HelloWorld",
@@ -8,12 +8,15 @@ import api from '@/api/api';
         msg: String
     },
     data(){
-        ListCarros: []
+        return{
+            ListCarros: []
+        }
     },
     mounted(){
-        api.get('/carros/')
+        api.get('/carro/')
         .then((Response)=>{
             this.ListCarros = Response.data;
+            console.log(this.ListCarros)
         })
     },
     components: { Card }
@@ -55,18 +58,14 @@ import api from '@/api/api';
             <h1 className="text-1xl text-center mt-8 text-slate-800 font-bold animate-bounce">
                     Ver Modelos
                 </h1>
-                <div className=" grid-cols-4 gap-4 flex justify-center mt-12 mb-20 px-32" 
-                v-for="(ListCarros, index) in libraryList" :key="index">
-                    <Card 
-                    :nome=""
-                    :velocidade=""
-                    :ano/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    
-                    
 
+                <div className=" grid-cols-4 gap-4 flex justify-center mt-12 mb-20 px-32" >
+                    <Card v-for="(ListCarros, index) in ListCarros" :key="index"
+                    :nome="ListCarros.nome"
+                    :cor="ListCarros.cor"
+                    :ano="ListCarros.Ano_Fabricante"/>
+                    
+                
                 </div>
                 
          </div>
