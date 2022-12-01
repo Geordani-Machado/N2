@@ -2,7 +2,6 @@
   <div class="border-4 rounded-xl ">
     <img src="../assets/car-1.jpg" className="rounded-xl p-2"/>
     <h1>{{ nome }}</h1>
-    <h1>Nome</h1>
     <h1>Velocidade</h1>
     <h1>Ano</h1>
     <h1>tipo</h1>
@@ -17,7 +16,10 @@
 export default {
   name: 'HelloWorld',
   props: {
-    nome: String
+    nome: String,
+    velocidade: String,
+    ano: String,
+    tipo: String
   }
 }
 </script>
