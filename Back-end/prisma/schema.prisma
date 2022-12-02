@@ -23,13 +23,14 @@ model Carro {
   Ano_Fabricante String
   isReserved     Boolean
   Reserva        Reserva?
+  url            String
 }
 
 model Reserva {
   id_moto     Int       @unique
   id_carro    Int       @unique
-  data_inicio DateTime
-  data_fim    DateTime
+  data_inicio String
+  data_fim    String
   Carro       Carro     @relation(fields: [id_carro], references: [id_carro])
   Motorista   Motorista @relation(fields: [id_moto], references: [id_moto])
 }

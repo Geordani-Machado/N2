@@ -6,10 +6,11 @@ interface ICarro{
     cor :            string
     Ano_Fabricante : string
     isReserved     : boolean
+    url :            string
 }
 
 export class CreateCarro{
-    async execute({nome, cor, Ano_Fabricante, isReserved} : ICarro){
+    async execute({nome, cor, Ano_Fabricante, isReserved, url} : ICarro){
     /*
     const carroExist = await Prisma.carro.findFirst({
         
@@ -24,7 +25,8 @@ export class CreateCarro{
             nome,
             cor,
             Ano_Fabricante,
-            isReserved
+            isReserved,
+            url
         }
     })
 

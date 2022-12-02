@@ -38,14 +38,10 @@ import api from '../api/api.ts';
                 </h1>
                 <div className="py-1 mt-5 flex rounded-lg">
                     <div className="p-3 border-4 rounded-lg border-slate mr-3">
-                       
                             <button> 🚙 Colocar meu carro para alugar </button>
-                       
                     </div>
                     <div className="p-3 border-4 rounded-lg border-slate ml-3 mr-3">
-                        
                             <button> 🚗 Alugar um Carro </button>
-                        
                     </div>
                 </div>
             </div>
@@ -55,28 +51,55 @@ import api from '../api/api.ts';
          </div>
 
          <div classNAme="mt-15">
-            <h1 className="text-1xl text-center mt-8 text-slate-800 font-bold animate-bounce">
-                    Ver Modelos
-                </h1>
-
-                <div className=" grid-cols-4 gap-4 flex justify-center mt-12 mb-20 px-32" >
-                    <Card v-for="(ListCarros, index) in ListCarros" :key="index"
-                    :nome="ListCarros.nome"
-                    :cor="ListCarros.cor"
-                    :ano="ListCarros.Ano_Fabricante"/>
-                    
-                
+            <h1 className="text-1xl text-center mt-8 text-slate-800 font-bold animate-bounce"> Ver Modelos </h1> 
+            <div class="flex">
+            <div className="ml-8">
+                <h1 className="text-slate-600 text-xl font-semibold">Filtros</h1>
+                <div className="mt-4">
+                    <label>Cores</label><br/>
+                    <br/>
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    Vermelho
+                    <br/>
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    Verde
+                    <br/>
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    Preto
+                    <br/>
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    Vermelho
+                    <br/>
                 </div>
                 
-         </div>
-    
-     
-      
-        
-        
-      
-     
-      
-     
-      
+           
+            </div>
+                <div className="grid-cols-4 flex justify-center mt-8 mb-20 px-32" >
+                    <div v-for="(ListCarros, index) in ListCarros" :key="index">
+                        <Card 
+                        :nome="ListCarros.nome"
+                        :cor="ListCarros.cor"
+                        :ano="ListCarros.Ano_Fabricante"
+                        :url="ListCarros.url"
+                    />
+                    </div>
+                </div>
+                </div>
+            </div>
   </template>
