@@ -50,11 +50,11 @@ import api from '../api/api.ts';
             </div>
          </div>
 
-         <div classNAme="mt-15">
+         <div classNAme="mt-18">
             <h1 className="text-1xl text-center mt-8 text-slate-800 font-bold animate-bounce"> Ver Modelos </h1> 
-            <div class="flex">
+            <div class="flex justify-center">
             <div className="ml-8">
-                <h1 className="text-slate-600 text-xl font-semibold">Filtros</h1>
+                <h1 className="text-slate-600 text-xl font-semibold mt-12">Filtros</h1>
                 <div className="mt-4">
                     <label>Cores</label><br/>
                     <br/>
@@ -90,7 +90,7 @@ import api from '../api/api.ts';
                 
            
             </div>
-                <div className="grid-cols-4 flex justify-center mt-8 mb-20 px-32" >
+                <div className="grid grid-cols-4 gap-4 justify-center mt-8 mb-20 px-32" >
                     <div v-for="(ListCarros, index) in ListCarros" :key="index">
                         <Card 
                         :nome="ListCarros.nome"
@@ -102,4 +102,6 @@ import api from '../api/api.ts';
                 </div>
                 </div>
             </div>
+            <h1 class=" justify-center text-center mb-4">Feito com muito ❤️☕ por Geordani Machado & Gabriela Von | 
+                Projeto Open Sorce: <a href="https://github.com/Geordani-Machado/N2"> https://github.com/Geordani-Machado/N2 </a> </h1>
   </template>
