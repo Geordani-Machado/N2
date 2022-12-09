@@ -26,8 +26,10 @@ import api from '../api/api.ts';
   </script>
 <template>
     
-        <div className="p-5"> 
+        <div className="p-5 flex"> 
         <h1 className="ml-7 text-slate-600 text-xl font-semibold">Ritter Locações</h1>
+        <h1 className="ml-32 text-slate-600  font-semibold">Alugar Carro</h1>
+        <h1 className="ml-7 text-slate-600  font-semibold">Colocar Carro para alugar</h1>
          </div>
 
          <div className="w-screen flex justify-content align-items">
@@ -90,6 +92,95 @@ import api from '../api/api.ts';
                     class="w-4 h-4">
                     Vermelho
                     <br/>
+                    
+                </div>
+
+                <div className="mt-4">
+                    <label>Anos</label><br/>
+                    <br/>
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    2022-2021
+                    <br/>
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    2019-2018
+                    <br/>
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    2017-2016
+                    <br/>
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    2015-2014
+                    <br/>
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    2013-2012
+                    <br/>
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    2011-2010
+                    <br/>
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    2009-2008
+                    <br/><input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    2007-2006
+                    <br/>
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    2005-2004
+                    <br/>
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    2003-2002
+                    <br/>
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    2001-2000
+                    <br/>
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    1999-1998
+                    <br/>
                     <button class="bg-blue-500 hover:bg-blue-700
                      text-white font-bold py-2 px-4 rounded 
                      justify-center w-full mt-4">Consultar</button>
@@ -109,6 +200,19 @@ import api from '../api/api.ts';
                 </div>
                 </div>
             </div>
-            <h1 class=" justify-center text-center mb-4">Feito com muito ❤️☕ por Geordani Machado & Gabriela Von | 
+            <div class="flex">
+                <div>
+                    <h1 class="mb-4">Feito com muito ❤️☕ por Geordani Machado & Gabriela Von | 
                 Projeto Open Sorce: <a href="https://github.com/Geordani-Machado/N2"> https://github.com/Geordani-Machado/N2 </a> </h1>
+
+                </div>
+                <div class="flex">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" className="rounded-xl justify-center" style="height: 20px;"/>
+                <h1 class="ml-1 mb-4">
+                Projeto Open Sorce: <a href="https://github.com/Geordani-Machado/N2"> https://github.com/Geordani-Machado/N2 </a> </h1>
+                </div>
+
+            </div>
+           
+                
   </template>
