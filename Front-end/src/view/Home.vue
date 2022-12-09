@@ -200,10 +200,10 @@ import api from '../api/api.ts';
                 </div>
                 </div>
             </div>
-            <div class="flex">
-                <div>
-                    <h1 class="mb-4">Feito com muito ❤️☕ por Geordani Machado & Gabriela Von | 
-                Projeto Open Sorce: <a href="https://github.com/Geordani-Machado/N2"> https://github.com/Geordani-Machado/N2 </a> </h1>
+            <div class="flex justify-center">
+                <div class="ml-4 mr-4">
+                    <h1 class="mb-4 ml-2">Feito com muito ❤️☕ por Geordani Machado & Gabriela Von
+                    </h1>
 
                 </div>
                 <div class="flex">
