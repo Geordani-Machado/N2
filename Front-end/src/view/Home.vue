@@ -1,5 +1,7 @@
 <script>
 import Card from '@/components/Card.vue';
+import  CreateButton from '@/components/Modal/create.vue';
+import ReservaButton from '@/components/Modal/reserve.vue'
 import api from '../api/api.ts';
 
   export default {
@@ -19,7 +21,7 @@ import api from '../api/api.ts';
             console.log(this.ListCarros)
         })
     },
-    components: { Card }
+    components: { Card, CreateButton, ReservaButton }
 }
   </script>
 <template>
@@ -37,12 +39,11 @@ import api from '../api/api.ts';
                     Os melhores preços para você alugar um carro.
                 </h1>
                 <div className="py-1 mt-5 flex rounded-lg">
-                    <div className="p-3 border-4 rounded-lg border-slate mr-3">
-                            <button> 🚙 Colocar meu carro para alugar </button>
+                    <div class="mr-2">
+                        <CreateButton/>
                     </div>
-                    <div className="p-3 border-4 rounded-lg border-slate ml-3 mr-3">
-                            <button> 🚗 Alugar um Carro </button>
-                    </div>
+                            
+                        <ReservaButton/>
                 </div>
             </div>
             <div className="rounded-l-lg ...">
