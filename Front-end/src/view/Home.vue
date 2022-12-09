@@ -46,14 +46,17 @@ import api from '../api/api.ts';
                 </div>
             </div>
             <div className="rounded-l-lg ...">
-                <img className="border-3" src="../assets/hero-banner.jpg"/>
+                <img className="border-3" 
+                src="../assets/hero-banner.jpg"/>
             </div>
          </div>
 
          <div classNAme="mt-18">
-            <h1 className="text-1xl text-center mt-8 text-slate-800 font-bold animate-bounce"> Ver Modelos </h1> 
+            <h1 className="text-1xl text-center mt-8
+             text-slate-800 font-bold animate-bounce"> 
+             Ver Modelos </h1> 
             <div class="flex justify-center">
-            <div className="ml-8">
+            <div className="ml-8 w-2/12">
                 <h1 className="text-slate-600 text-xl font-semibold mt-12">Filtros</h1>
                 <div className="mt-4">
                     <label>Cores</label><br/>
@@ -86,6 +89,9 @@ import api from '../api/api.ts';
                     class="w-4 h-4">
                     Vermelho
                     <br/>
+                    <button class="bg-blue-500 hover:bg-blue-700
+                     text-white font-bold py-2 px-4 rounded 
+                     justify-center w-full mt-4">Consultar</button>
                 </div>
                 
            
