@@ -14,7 +14,9 @@ CREATE TABLE "Carro" (
     "cor" TEXT NOT NULL,
     "Ano_Fabricante" TEXT NOT NULL,
     "isReserved" BOOLEAN NOT NULL,
-    "url" TEXT NOT NULL
+    "url" TEXT NOT NULL,
+    "isEletrico" BOOLEAN NOT NULL,
+    "portas" TEXT NOT NULL
 );
 
 -- CreateTable

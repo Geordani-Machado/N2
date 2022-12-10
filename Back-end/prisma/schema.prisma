@@ -24,6 +24,8 @@ model Carro {
   isReserved     Boolean
   Reserva        Reserva?
   url            String
+  isEletrico     Boolean
+  portas         String
 }
 
 model Reserva {
