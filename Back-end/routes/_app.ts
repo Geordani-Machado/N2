@@ -7,8 +7,8 @@ import { CreateReservaControler } from "../src/modules/Reserva/CreateReservaCont
 import { FindAllCarrosfromColorController } from "../src/modules/Carro/FindAllCarrosfromColorController";
 import { FindAllCarrosfromYearController } from "../src/modules/Carro/FindAllCarrosFromYearController";
 import { FindAllCarrosfromEletricosController } from "../src/modules/Carro/FindAllCarrosFromEletricosController";
-import { FindAllMotoristaFromYear } from "../src/modules/Motorista/FindAllMotoristaFromIdade";
 import { FindAllMotoristaFromYearController } from "../src/modules/Motorista/FindAllMotoristaFromIdadeController";
+import { FindAllMotoristaFromSexoController } from "../src/modules/Motorista/FindAllMotoristaFromSexoController";
 
 const Routes = Router();
 
@@ -21,6 +21,7 @@ const findAllCarrosfromColorController = new FindAllCarrosfromColorController();
 const findAllCarrosFromYearController = new FindAllCarrosfromYearController();
 const findAllCarrosFromEletricosController = new FindAllCarrosfromEletricosController();
 const findAllMotoristaFromYearController = new FindAllMotoristaFromYearController();
+const findAllMotoristaFromSexoController = new FindAllMotoristaFromSexoController();
 
 Routes.post("/motorista/", createMotoristaController.handle);
 Routes.post("/carro/", createCarroController.handle);
@@ -37,7 +38,7 @@ Routes.get("/carro/eletrico", findAllCarrosFromEletricosController.handle)
 
 // Motorista
 Routes.get("/motorista/year" , findAllMotoristaFromYearController.handle)
-
+Routes.get("/motorista/sexo" , findAllMotoristaFromSexoController.handle)
 
 
 Routes.get("/Api" , (req , res) =>{
