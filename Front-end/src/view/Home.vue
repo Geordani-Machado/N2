@@ -1,5 +1,6 @@
 <script>
 import Card from '@/components/Card.vue';
+import CardMotorista from "@/components/CardMotorista"
 import  CreateButton from '@/components/Modal/create.vue';
 import ReservaButton from '@/components/Modal/reserve.vue'
 import api from '../api/api.ts';
@@ -11,7 +12,7 @@ import api from '../api/api.ts';
     },
     data(){
         return{
-            ListCarros: []
+            ListCarros: [],
             ListMotorista: []
         }
     },
@@ -28,7 +29,7 @@ import api from '../api/api.ts';
             console.log(this.ListMotorista)
         })
     },
-    components: { Card, CreateButton, ReservaButton }
+    components: { Card, CreateButton, ReservaButton , CardMotorista }
 }
   </script>
 <template>
@@ -58,27 +59,22 @@ import api from '../api/api.ts';
                 <div className="text-1xl mt-10 text-slate-800 font-bold">
 
                 Motoristas
-                <div className="grid grid-cols-4 gap-4 justify-center mt-8 mb-20 px-32" >
+                <div className="flex mt-8 mb-20" >
                     <div v-for="(ListMotorista, index) in ListMotorista" :key="index">
-                        <Card 
+                        <CardMotorista
                         :nome="ListMotorista.nome"
-                        :ano="ListMotorista.idade"
+                        :idade="ListMotorista.idade"
                         :sexo="ListMotorista.sexo"
                     />
                     </div>
+                    </div>
                 </div>
-                
-
-                </div>
-
             </div>
             <div className="rounded-l-lg ...">
                 <img className="border-3" 
                 src="../assets/hero-banner.jpg"/>
             </div>
          </div>
-
-         
 
          <div classNAme="mt-18">
             <h1 className="text-1xl text-center mt-8
