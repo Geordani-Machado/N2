@@ -8,16 +8,18 @@
       <h1 class="ml-2 mr-2"> Ano: {{ ano }}</h1>
     </div>
     <div class="flex justify-center">
+    <div class="flex justify-center">
       <img src="https://cdn-icons-png.flaticon.com/512/4564/4564336.png" 
       className="justify-center" style="width: 28px;"/>
       {{Eletrico ? 'Verdadeiro' : 'Falso '}}
+      <h1 class="ml-2 mr-2"> | </h1>
     </div>
     <div class=" justify-center">
-      Portas
+      <h1 class="ml-2 mr-2">Portas: {{ Portas }}</h1>
+    </div>
     </div>
     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded 
      justify-center w-full">Reservar</button>
-   
   </div>
 </template>
 
@@ -29,7 +31,8 @@ export default {
     cor: String,
     ano: String,
     url: String,
-    Eletrico: Boolean
+    Eletrico: Boolean,
+    Portas : String
   }
 }
 </script>
