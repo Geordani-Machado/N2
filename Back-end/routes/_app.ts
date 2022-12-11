@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { CreateMotoristaControler } from "../src/modules/Motorista/CreateMotoristaControler";
+import { CreateMotoristaControler } from "../src/modules/Motorista/CreateMotoristaController";
 import {CreateCarroControler} from "../src/modules/Carro/CreateCarroController";
 import { GetAllCarrosControler } from "../src/modules/Carro/GetAllCarroController";
-import { GetAllMotoristaControler } from "../src/modules/Motorista/GetAllMotoristasControles";
-import { CreateReservaControler } from "../src/modules/Reserva/CreateReservaControler";
+import { GetAllMotoristaControler } from "../src/modules/Motorista/GetAllMotoristasController";
+import { CreateReservaControler } from "../src/modules/Reserva/CreateReservaController";
 import { FindAllCarrosfromColorController } from "../src/modules/Carro/FindAllCarrosfromColorController";
 import { FindAllCarrosfromYearController } from "../src/modules/Carro/FindAllCarrosFromYearController";
 import { FindAllCarrosfromEletricosController } from "../src/modules/Carro/FindAllCarrosFromEletricosController";
