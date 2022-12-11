@@ -13,6 +13,6 @@ export class CreateReservaControler{
             data_inicio,
             data_fim
         })
-        return response.json(`Motorista cadastrado com suceso! ${JSON.stringify(result)} `);
+        return response.json(`Motorista cadastrado com sucesso! ${JSON.stringify(result)} `);
     }
 }
