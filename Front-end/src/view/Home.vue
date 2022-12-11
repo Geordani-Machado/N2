@@ -12,6 +12,7 @@ import api from '../api/api.ts';
     data(){
         return{
             ListCarros: []
+            ListMotorista: []
         }
     },
     mounted(){
@@ -19,6 +20,12 @@ import api from '../api/api.ts';
         .then((Response)=>{
             this.ListCarros = Response.data;
             console.log(this.ListCarros)
+        })
+
+        api.get('/motorista/')
+        .then((Response)=>{
+            this.ListMotorista = Response.data;
+            console.log(this.ListMotorista)
         })
     },
     components: { Card, CreateButton, ReservaButton }
@@ -51,6 +58,15 @@ import api from '../api/api.ts';
                 <div className="text-1xl mt-10 text-slate-800 font-bold">
 
                 Motoristas
+                <div className="grid grid-cols-4 gap-4 justify-center mt-8 mb-20 px-32" >
+                    <div v-for="(ListMotorista, index) in ListMotorista" :key="index">
+                        <Card 
+                        :nome="ListMotorista.nome"
+                        :ano="ListMotorista.idade"
+                        :sexo="ListMotorista.sexo"
+                    />
+                    </div>
+                </div>
                 
 
                 </div>
