@@ -7,8 +7,8 @@ import { CreateReservaControler } from "../src/modules/Reserva/CreateReservaCont
 import { FindAllCarrosfromColorController } from "../src/modules/Carro/FindAllCarrosfromColorController";
 import { FindAllCarrosfromYearController } from "../src/modules/Carro/FindAllCarrosFromYearController";
 import { FindAllCarrosfromEletricosController } from "../src/modules/Carro/FindAllCarrosFromEletricosController";
-import { FindAllMotoristaFromYear } from "../src/modules/Motorista/FindAllMotoristaFromYear";
-import { FindAllMotoristaFromYearController } from "../src/modules/Motorista/FindAllMotoristaFromYearController";
+import { FindAllMotoristaFromYear } from "../src/modules/Motorista/FindAllMotoristaFromIdade";
+import { FindAllMotoristaFromYearController } from "../src/modules/Motorista/FindAllMotoristaFromIdadeController";
 
 const Routes = Router();
 
