@@ -195,6 +195,7 @@ import api from '../api/api.ts';
                         :cor="ListCarros.cor"
                         :ano="ListCarros.Ano_Fabricante"
                         :url="ListCarros.url"
+                        :Eletrico="ListCarros.isEletrico"
                     />
                     </div>
                 </div>
