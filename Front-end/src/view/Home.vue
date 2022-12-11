@@ -47,12 +47,22 @@ import api from '../api/api.ts';
                             
                         <ReservaButton/>
                 </div>
+
+                <div className="text-1xl mt-10 text-slate-800 font-bold">
+
+                Motoristas
+                
+
+                </div>
+
             </div>
             <div className="rounded-l-lg ...">
                 <img className="border-3" 
                 src="../assets/hero-banner.jpg"/>
             </div>
          </div>
+
+         
 
          <div classNAme="mt-18">
             <h1 className="text-1xl text-center mt-8
