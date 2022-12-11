@@ -185,8 +185,7 @@ import api from '../api/api.ts';
                      text-white font-bold py-2 px-4 rounded 
                      justify-center w-full mt-4">Consultar</button>
                 </div>
-                
-           
+                 
             </div>
                 <div className="grid grid-cols-4 gap-4 justify-center mt-8 mb-20 px-32" >
                     <div v-for="(ListCarros, index) in ListCarros" :key="index">
@@ -196,6 +195,7 @@ import api from '../api/api.ts';
                         :ano="ListCarros.Ano_Fabricante"
                         :url="ListCarros.url"
                         :Eletrico="ListCarros.isEletrico"
+                        :Portas="ListCarros.portas"
                     />
                     </div>
                 </div>
