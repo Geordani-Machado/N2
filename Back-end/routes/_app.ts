@@ -32,13 +32,13 @@ Routes.get("/motorista", getAllMotoristaController.handle)
 
 // Buscar - (10 Selects que tinham que ser feitos)
 
-Routes.get("/carro/cor" , findAllCarrosfromColorController.handle)
-Routes.get("/carro/year", findAllCarrosFromYearController.handle)
-Routes.get("/carro/eletrico", findAllCarrosFromEletricosController.handle)
+Routes.post("/carro/cor" , findAllCarrosfromColorController.handle)
+Routes.post("/carro/year", findAllCarrosFromYearController.handle)
+Routes.post("/carro/eletrico", findAllCarrosFromEletricosController.handle)
 
 // Motorista
-Routes.get("/motorista/year" , findAllMotoristaFromYearController.handle)
-Routes.get("/motorista/sexo" , findAllMotoristaFromSexoController.handle)
+Routes.post("/motorista/year" , findAllMotoristaFromYearController.handle)
+Routes.post("/motorista/sexo" , findAllMotoristaFromSexoController.handle)
 
 
 Routes.get("/Api" , (req , res) =>{

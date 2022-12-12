@@ -9,6 +9,8 @@ export class FindAllCarrosfromColorController{
         const findCarrosfromColor = await findAllCarrosfromColor.execute(cor);
 
         return response.json(findCarrosfromColor);
+        
 
     }
+    
 }

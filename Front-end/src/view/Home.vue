@@ -17,16 +17,15 @@ import api from '../api/api.ts';
         }
     },
     mounted(){
-        api.get('/carro/')
-        .then((Response)=>{
+        api.get('/carro/',
+            ).then((Response)=>{
             this.ListCarros = Response.data;
-            console.log(this.ListCarros)
         })
 
         api.get('/motorista/')
         .then((Response)=>{
             this.ListMotorista = Response.data;
-            console.log(this.ListMotorista)
+            
         })
     },
     components: { Card, CreateButton, ReservaButton , CardMotorista }
@@ -59,7 +58,7 @@ import api from '../api/api.ts';
                 <div className="text-1xl mt-10 text-slate-800 font-bold">
 
                 Motoristas
-                <div className="flex mt-8 mb-20" >
+                <div className="flex mt-2 mb-20" >
                     <div v-for="(ListMotorista, index) in ListMotorista" :key="index">
                         <CardMotorista
                         :nome="ListMotorista.nome"
@@ -85,7 +84,6 @@ import api from '../api/api.ts';
                 <h1 className="text-slate-600 text-xl font-semibold mt-12">Filtros</h1>
                 <div className="mt-4">
                     <label>Cores</label><br/>
-                    <br/>
                     <input 
                     id="link-checkbox" 
                     type="checkbox" 
@@ -119,7 +117,6 @@ import api from '../api/api.ts';
 
                 <div className="mt-4">
                     <label>Anos</label><br/>
-                    <br/>
                     <input 
                     id="link-checkbox" 
                     type="checkbox" 
@@ -203,6 +200,39 @@ import api from '../api/api.ts';
                     class="w-4 h-4">
                     1999-1998
                     <br/>
+
+                    <label class="inline-flex relative items-center cursor-pointer mt-4">
+                        <input type="checkbox" value="" class="sr-only peer">
+                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none   dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                        <span class="ml-3 text-sm font-medium">Eletrico</span>
+                    </label>
+
+                    <div class="mt-4">
+                        <label>Portas</label><br/>
+                    
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    2 Portas
+                    <br/>
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    3 Portas
+                    <br/>
+                    <input 
+                    id="link-checkbox" 
+                    type="checkbox" 
+                    value="vermelho" 
+                    class="w-4 h-4">
+                    4 Portas
+                    <br/>
+                    </div>
+
                     <button class="bg-blue-500 hover:bg-blue-700
                      text-white font-bold py-2 px-4 rounded 
                      justify-center w-full mt-4">Consultar</button>
@@ -218,6 +248,7 @@ import api from '../api/api.ts';
                         :url="ListCarros.url"
                         :Eletrico="ListCarros.isEletrico"
                         :Portas="ListCarros.portas"
+                        :id="ListCarros.id_carro"
                     />
                     </div>
                 </div>
