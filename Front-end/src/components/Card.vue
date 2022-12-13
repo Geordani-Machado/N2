@@ -1,7 +1,7 @@
 <template>
   <div class="border-4 rounded-xl ml-1 mb-1 justify-center">
-    <img v-bind:src="url" className="rounded-xl justify-center items-center" style="width: 280px; 
-    height: 160px; justify-items: center;"/>
+    <img v-bind:src="url" className="rounded-xl justify-center items-center" style="width: 220px; 
+    height: 120px; justify-items: center;"/>
     <h1 class=" text-center text-slate-600 text-xl font-semibold">{{ nome }}  #{{ id }} </h1>
     <div class="flex justify-center">
       <h1 class="ml-2 mr-2">Cor: {{ cor }}</h1>
