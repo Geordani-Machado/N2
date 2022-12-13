@@ -9,6 +9,7 @@ import { FindAllCarrosfromYearController } from "../src/modules/Carro/FindAllCar
 import { FindAllCarrosfromEletricosController } from "../src/modules/Carro/FindAllCarrosFromEletricosController";
 import { FindAllMotoristaFromYearController } from "../src/modules/Motorista/FindAllMotoristaFromIdadeController";
 import { FindAllMotoristaFromSexoController } from "../src/modules/Motorista/FindAllMotoristaFromSexoController";
+import { FindAllCarrosfromPortasController } from "../src/modules/Carro/FindAllCarrosFromPortasController";
 
 const Routes = Router();
 
@@ -22,6 +23,7 @@ const findAllCarrosFromYearController = new FindAllCarrosfromYearController();
 const findAllCarrosFromEletricosController = new FindAllCarrosfromEletricosController();
 const findAllMotoristaFromYearController = new FindAllMotoristaFromYearController();
 const findAllMotoristaFromSexoController = new FindAllMotoristaFromSexoController();
+const findAllCarrosFromPortasController = new FindAllCarrosfromPortasController();
 
 Routes.post("/motorista/", createMotoristaController.handle);
 Routes.post("/carro/", createCarroController.handle);
@@ -35,6 +37,7 @@ Routes.get("/motorista", getAllMotoristaController.handle)
 Routes.post("/carro/cor" , findAllCarrosfromColorController.handle)
 Routes.post("/carro/year", findAllCarrosFromYearController.handle)
 Routes.post("/carro/eletrico", findAllCarrosFromEletricosController.handle)
+Routes.post("/carro/portas", findAllCarrosFromPortasController.handle)
 
 // Motorista
 Routes.post("/motorista/year" , findAllMotoristaFromYearController.handle)
