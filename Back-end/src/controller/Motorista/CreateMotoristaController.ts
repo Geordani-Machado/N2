@@ -1,5 +1,5 @@
 import { Request , Response } from "express";
-import { CreateMotorista } from "./CreateMotorista";
+import { CreateMotorista } from "../../modules/Motorista/CreateMotorista";
 
 
 export class CreateMotoristaControler{

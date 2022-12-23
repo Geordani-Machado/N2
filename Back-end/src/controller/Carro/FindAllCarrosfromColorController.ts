@@ -1,5 +1,5 @@
 import { Response , Request } from "express"
-import { FindAllCarrosfromColor } from "./FindAllCarrosfromColor"
+import { FindAllCarrosfromColor } from "../modules/Carro/FindAllCarrosfromColor"
 
 
 export class FindAllCarrosfromColorController{

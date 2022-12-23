@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { CreateReserva } from "./CreateReserva";
+import { CreateReserva } from "../../modules/Reserva/CreateReserva";
 
 export class CreateReservaControler{
     async handle(request: Request, response: Response){
